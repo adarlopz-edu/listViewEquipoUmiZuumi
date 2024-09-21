@@ -1,6 +1,9 @@
 package com.example.listviewequipo;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,5 +20,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //hola, esto lo escribio brad
+    }
+
+    public void play(View view) {
+
     }
 }

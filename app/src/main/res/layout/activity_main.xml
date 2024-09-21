@@ -25,15 +25,23 @@
                 tools:layout_editor_absoluteY="61dp">
             </ImageView>
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="X&Y"
-                                    android:layout_gravity="center"
-                                    android:gravity="center"
-                                    android:textSize="50sp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="X&Y"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="50sp">
 
-                                </TextView>
+            </TextView>
+
+            <Button
+                android:id="@+id/play"
+                android:onClick="play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reproducir">
+            </Button>
 
             <ListView
                 android:id="@+id/listView"
