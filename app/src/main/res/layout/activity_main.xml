@@ -9,9 +9,21 @@
     tools:context=".MainActivity">
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="409dp"
         android:layout_height="354dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp" />
+        android:layout_marginTop="236dp"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/albumcover"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="61dp">
+
+    </ImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
