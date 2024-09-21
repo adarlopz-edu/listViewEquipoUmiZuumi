@@ -30,18 +30,20 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
+                    <EditText
+                        android:id="@+id/nombre"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Nombre"
                         android:textSize="25sp">
-                    </TextView>
-                    <TextView
+                    </EditText>
+                    <EditText
+                        android:id="@+id/numero"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Numero"
                         android:textSize="25sp">
-                    </TextView>
+                    </EditText>
                 </LinearLayout>
 
             <Button
@@ -54,8 +56,12 @@
             </Button>
 
                 <ListView
+                    android:id="@+id/listViewxml"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:divider="#000000"
+                    android:listSelector="#2196F3"
+                    android:dividerHeight="10dp">
 
                 </ListView>
 
