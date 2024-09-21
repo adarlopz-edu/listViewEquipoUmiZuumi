@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //hola, esto lo escribio brad
+        //hi
         findViewById(R.id.play);
     }
 
