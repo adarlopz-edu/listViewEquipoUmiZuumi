@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //hola, esto lo escribio brad
-        findViewById(R.id.play)
+        findViewById(R.id.play);
     }
 
     public void play(View view) {
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             mp3.release();
         mp3= new MediaPlayer();
         try {
-            mp3.setDataSource("https://audio.com/brandon-adair-lopez-lopez/audio/10-1685");
+            mp3.setDataSource("https://file-examples.com/storage/fee0ddbaf066ed3199cfa16/2017/11/file_example_MP3_700KB.mp3");
             mp3.prepareAsync();
             Toast.makeText(this, "wait", Toast.LENGTH_SHORT).show();
         }catch (IOException e){
