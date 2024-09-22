@@ -11,12 +11,12 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-     ListView listView;
-     ArrayList<String> nombres;
+    ListView listView;
+    EditText editTarea;
+    String StringTarea;
 
-     EditText editTarea;
-     String StringTarea;
-     ArrayAdapter<String> adaptador;
+    ArrayList<String> nombres;
+    ArrayAdapter<String> adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,19 +24,16 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.add);
         editTarea = findViewById(R.id.tarea);
         listView = (ListView) findViewById(R.id.listViewxml);
-        nombres = new ArrayList<String>();
 
+        nombres = new ArrayList<String>();
         adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nombres);
         listView.setAdapter(adaptador);
-
     }
 
     public void play(View view) {
         StringTarea = editTarea.getText().toString();
-
         nombres.add(StringTarea);
         adaptador.notifyDataSetChanged();
     }
