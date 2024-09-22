@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     public void play(View view) {
         StringTarea = editTarea.getText().toString();
         nombres.add(StringTarea);
+        //actualiza la pantalla cada que se añade un nuevo elemento a la lista
         adaptador.notifyDataSetChanged();
     }
 }
