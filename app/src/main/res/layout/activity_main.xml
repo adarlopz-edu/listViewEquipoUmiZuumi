@@ -19,7 +19,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Añadir contacto"
+                android:text="Lista de Tareas"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:textSize="25sp">
@@ -31,19 +31,14 @@
                     android:orientation="vertical">
 
                     <EditText
-                        android:id="@+id/nombre"
+                        android:id="@+id/tarea"
                         android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
                         android:layout_height="wrap_content"
-                        android:hint="Nombre"
+                        android:hint="Nombre de la tarea"
                         android:textSize="25sp">
                     </EditText>
-                    <EditText
-                        android:id="@+id/numero"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Numero"
-                        android:textSize="25sp">
-                    </EditText>
+
                 </LinearLayout>
 
             <Button
@@ -51,8 +46,9 @@
                 android:onClick="play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="añadir contacto">
+                android:text="AÑADIR TAREA">
             </Button>
 
                 <ListView

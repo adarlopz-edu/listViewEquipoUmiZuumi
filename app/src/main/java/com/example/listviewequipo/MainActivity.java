@@ -12,10 +12,11 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
      ListView listView;
-     ArrayList<String> contactos;
+     ArrayList<String> nombres;
 
-     EditText nom, num;
-     String nombre, numero;
+     EditText editTarea;
+     String StringTarea;
+     ArrayAdapter<String> adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,26 +24,20 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        findViewById(R.id.add);
+        editTarea = findViewById(R.id.tarea);
+        listView = (ListView) findViewById(R.id.listViewxml);
+        nombres = new ArrayList<String>();
+
+        adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nombres);
+        listView.setAdapter(adaptador);
 
     }
 
     public void play(View view) {
+        StringTarea = editTarea.getText().toString();
 
-        nombre = nom.getText().toString();
-        numero = num.getText().toString();
-
-        findViewById(R.id.add);
-        nom = findViewById(R.id.nombre);
-        num = findViewById(R.id.numero);
-        listView = (ListView) findViewById(R.id.listViewxml);
-
-        contactos = new ArrayList<String>();
-        contactos.add(nombre);
-        contactos.add(numero);
-        contactos.add("hola3");
-        contactos.add("hola4");
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, contactos);
-        listView.setAdapter(adapter);
-
+        nombres.add(StringTarea);
+        adaptador.notifyDataSetChanged();
     }
 }
