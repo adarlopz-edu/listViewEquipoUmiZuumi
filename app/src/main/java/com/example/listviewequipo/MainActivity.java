@@ -13,7 +13,6 @@ public class MainActivity extends AppCompatActivity {
 
     ListView listView;
     EditText editTarea;
-    String StringTarea;
 
     ArrayList<String> nombres;
     ArrayAdapter<String> adaptador;
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         editTarea = findViewById(R.id.tarea);
-        listView = (ListView) findViewById(R.id.listViewxml);
+        listView = findViewById(R.id.listViewxml);
 
         nombres = new ArrayList<String>();
         adaptador = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nombres);
@@ -33,8 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void play(View view) {
-        StringTarea = editTarea.getText().toString();
-        nombres.add(StringTarea);
+        nombres.add(editTarea.getText().toString());
         //actualiza la pantalla cada que se añade un nuevo elemento a la lista
         adaptador.notifyDataSetChanged();
     }
